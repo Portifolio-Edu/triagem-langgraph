@@ -1,6 +1,6 @@
-# Como explicar este projeto em entrevista
+# Decisões de desenho
 
-**Em uma frase:** é a triagem de atendimento que eu fiz em n8n para um escritório de contabilidade, reescrita em Python com LangGraph, com as duas falhas que aconteceram em produção resolvidas por desenho e provadas por teste.
+**Em uma frase:** a triagem de atendimento que eu fiz em n8n para um escritório de contabilidade, reescrita em Python com LangGraph, com as duas falhas que aconteceram em produção resolvidas por desenho e provadas por teste.
 
 ## O que é o estado
 Um `TypedDict` (`Estado`) com tudo o que a mensagem acumula no caminho: texto, classificação, decisão, protocolo, evento, resposta e o caminho percorrido. Cada nó lê o estado e devolve só o que mudou. Cada mensagem entra com o estado zerado, para nada da volta anterior vazar. A conversa é o `thread_id` do checkpointer.
